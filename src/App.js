@@ -32,6 +32,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (tasks.length === 0) return;
     localStorage.setItem("task", JSON.stringify(tasks));
   }, [tasks]);
 
@@ -51,7 +52,6 @@ function App() {
 
   //DeleteUser
   const deleteUser = (id) => {
-    console.log(id);
     settasks(tasks.filter((user) => user.id !== id));
   };
 

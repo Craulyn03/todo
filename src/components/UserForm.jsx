@@ -13,8 +13,6 @@ const UserForm = ({ addUser }) => {
     data.id = uuidv4();
     data.complete = false;
     addUser(data);
-
-    e.target.reset();
   };
 
   return (
